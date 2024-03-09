@@ -8,34 +8,58 @@ const Timeline = ({ setObserver, callback }) => {
   const [message1, setMessage1] = useState("");
   const [message2, setMessage2] = useState("");
   const [message3, setMessage3] = useState("");
+  const [message4, setMessage4] = useState("");
+  const [message5, setMessage5] = useState("");
+  const [message6, setMessage6] = useState("");
 
   const timeline1 = useRef(null);
   const timeline2 = useRef(null);
   const timeline3 = useRef(null);
+  const timeline4 = useRef(null);
+  const timeline5 = useRef(null);
+  const timeline6 = useRef(null);
   const circle1 = useRef(null);
   const circle2 = useRef(null);
   const circle3 = useRef(null);
+  const circle4 = useRef(null);
+  const circle5 = useRef(null);
+  const circle6 = useRef(null);
 
   const someCallback = () => {
-    setMessage1("ssssone");
+    setMessage1("Functional tester");
     callback();
   };
 
   const someCallback2 = () => {
-    setMessage2("Step two");
+    setMessage2("Data steward");
   };
 
   const someCallback3 = () => {
-    setMessage3("Finish");
+    setMessage3("Office assistant");
+  };
+  const someCallback4 = () => {
+    setMessage3("Translator");
+  };
+  const someCallback5 = () => {
+    setMessage3("Promotion manager");
+  };
+    const someCallback6 = () => {
+      setMessage3("Bookseller"); 
   };
 
   useEffect(() => {
     setObserver(timeline1.current);
     setObserver(timeline2.current);
     setObserver(timeline3.current);
+    setObserver(timeline4.current);
+    setObserver(timeline5.current);
+    setObserver(timeline6.current);
     setObserver(circle1.current, someCallback);
     setObserver(circle2.current, someCallback2);
-    setObserver(circle3.current, someCallback3);
+    setObserver(circle3.current, someCallback3)
+    setObserver(circle4.current, someCallback4)
+    setObserver(circle5.current, someCallback5)
+    setObserver(circle6.current, someCallback6);
   }, []);
 
   return (
