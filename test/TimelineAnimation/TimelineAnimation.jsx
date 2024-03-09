@@ -17,7 +17,7 @@ const Timeline = ({ setObserver, callback }) => {
   const circle3 = useRef(null);
 
   const someCallback = () => {
-    setMessage1("Step one");
+    setMessage1("ssssone");
     callback();
   };
 
